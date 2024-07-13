@@ -5,6 +5,7 @@
   </head>
   <body>
     <script>
+    /* 
       true
       false
 
@@ -23,12 +24,104 @@
         console.log('You can not drive');
       }
 
-      /*Logical operators &&*/
+      Logical operators &&
       console.log(true && true);
       console.log(0.2 >= 0 && 0.2 < 1 / 3);
 
       console.log(true || false);
       console.log(!false);
+    
+    */  
+
+      /*Truthy and Falsy Values*/
+      /*
+      Falsy Values: false, 0, '', NaN(Not a Number), undefined(something does not have a value), null
+      */
+
+      /* 
+      if(0){
+        console.log('truthy');
+      }
+
+      const cartQuantity = 5;
+      if(cartQuantity){
+        console.log('cart has products')
+      }
+
+      console.log(!0);
+
+      console.log('text' / 5);
+
+      let variable1;
+      console.log(variable1);
+
+      const variable2 = undefined;
+      console.log(variable2);
+      */
+
+      /*Shortcuts for If-Statements:
+      -Ternary Operator (?:)
+      -Guard Operator (&&)
+      -Default Operator (||)
+      */
+
+      const result = 0 ? 'truthy' : 'falsy';
+      console.log(result);
+
+      // Long version 
+      /*
+      let result;
+      if(condition) {
+        result = 'truthy'
+      } else {
+        result = 'falsy'
+      }
+      */
+
+      /*2-Guard Operator &&
+      This is short circuit evaluation 
+      false && value2 not need to check right side
+      */
+     false && console.log('hello');
+
+
+      //Long version 
+      /*
+      if (condition) {
+        console.log('hello');
+      }
+      */
+
+      const message = 9 && 'hello';
+      console.log(message); //second part is the result
+
+      // Long version 
+      /*
+      let message;
+      if(condition) {
+        message = 'hello';
+      }
+      */
+
+      //3-Default Operator- OR Operator||
+      /*
+      true || value2 
+      checks if at  least one side is truthy
+      */
+
+      const currency1 = 'EUR' || 'USD'; //result is first one     
+      const currency = undefined || 'USD';
+      console.log(currency);
+
+      // Long version 
+      /*
+      let currency;
+
+      if(!condition) {
+        currency = 'USD';
+      }
+      */
+    
     </script>
   </body>
   
