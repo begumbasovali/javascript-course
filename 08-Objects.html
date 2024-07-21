@@ -27,11 +27,46 @@
       console.log(product);
       */
 
-    
+      const product2 = {
+        name: 'shirt',
+        ['delivery-time']: '1 day',
+        rating: { //nested object
+          stars: 4.5,
+          count:87
+        },
+
+        fun: function function1() {
+          console.log('function inside object');
+        }
+
+      };
+      console.log(product2);
+      console.log(product2.name); //Dot notation
+      console.log(product2['name'])// Bracet notation
+      //console.log(product2.delivery-time);
+      console.log(product2['delivery-time']);
+      
+      console.log(product2.rating.count);
+
+      product2.fun();
+
+      console.log(typeof console);
+      console.log(typeof console.log); //method
     
     </script>
   </body>
   
 </html>
 
-<!--An object groups multiple values together-->
+<!--An object groups multiple values together
+Bracket Notation:
+-lets us use properties that don't work with dot notation
+Inside an object, we can save any type of value
+
+console.log()
+console: is an object provided by js
+log(): is a function inside console object
+
+funciton inside object means: method
+object + function = method
+-->
