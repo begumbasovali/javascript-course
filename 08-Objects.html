@@ -52,6 +52,14 @@
 
       console.log(typeof console);
       console.log(typeof console.log); //method
+
+      //Convert JavaScript Object to JSON
+      console.log(JSON.stringify(product2));
+      console.log(typeof JSON.stringify(product2));
+
+      //Convert JSON to JavaScript Object
+      const jsonString = JSON.stringify(product2)
+      console.log(JSON.parse(jsonString));
     
     </script>
   </body>
@@ -69,4 +77,9 @@ log(): is a function inside console object
 
 funciton inside object means: method
 object + function = method
+
+Built-in objects:
+-JSON: JavaScript Object Notation,has less feature than JS, do not support function, more universal syntax, when we send data between computers and when store data use JSON
+
+-localStorage: save values more permanently, variables for temorary storage. When you refresh the page does not delete the values use localstroge.
 -->
