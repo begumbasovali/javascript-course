@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Document Object Model</title>
+    <title>DOM</title>
   </head>
   <body>
     <button>hello</button>
    
    
     <script>
+      //Properties and Methods
+
+      console.log(document.title);
+      document.title = 'Changed'; //title became DOM --> Changed
+      console.log(document.body);
+      console.log(typeof document.body);
+
+      console.log(document.body.innerHTML);
+      document.body.innerHTML ='Changed';
+      document.body.innerHTML = '<button>Good Job!</button>';
+
+
+      /*
       document.body.innerHTML = 'hello';
-      document.title = 'DOM';
-     
+      document.title = 'Document Model Object';
+     */
 
 
     </script>
@@ -22,6 +35,14 @@
   The document object represents /models the webpage = DOM
 
   documen object linked to the webpage
+
+  document object has methods
   
-  document object has methods 
+  Properties:
+  document.title
+  document.body : We can have HTML elements inside JS
+  The HTML element is converted into a JS object
+  document.body.innerHTML: Controls all the HTML inside the body
+
+  The DOM combines JS and HTML together
 -->
