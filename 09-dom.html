@@ -5,25 +5,42 @@
   </head>
   <body>
     <button>hello</button>
+    <button class="js-button">Second button</button>
    
    
     <script>
-      //Properties and Methods
 
+      console.log(document.querySelector('button').innerHTML);
+
+      document.querySelector('button')
+        .innerHTML = 'change';
+
+      const buttonElement = document.querySelector('.js-button');
+      console.log(buttonElement);
+
+
+
+
+
+
+      //Properties and Methods
+      /* 
       console.log(document.title);
-      document.title = 'Changed'; //title became DOM --> Changed
+      document.title = 'Changed'; 
       console.log(document.body);
       console.log(typeof document.body);
 
       console.log(document.body.innerHTML);
       document.body.innerHTML ='Changed';
       document.body.innerHTML = '<button>Good Job!</button>';
-
+      */
 
       /*
       document.body.innerHTML = 'hello';
       document.title = 'Document Model Object';
-     */
+      */
+
+
 
 
     </script>
@@ -44,5 +61,12 @@
   The HTML element is converted into a JS object
   document.body.innerHTML: Controls all the HTML inside the body
 
-  The DOM combines JS and HTML together
+  Every HTML element has a property .innerHTML
+  HTML elements are JS objects
+
+  The DOM combines JS and HTML together.It gives JS full control of the webpage
+
+  Methods:
+  method= function saved inside an object
+  document.querySelector() : lets us get any element from the page and put it inside JS
 -->
