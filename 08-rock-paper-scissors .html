@@ -26,18 +26,32 @@
     
     <script>
 
-      let score = JSON.parse(localStorage.getItem('score')); //Object
+      let score = JSON.parse(localStorage.getItem('score')) || {
+        wins: 0,
+        losses: 0,
+        ties: 0
+      };
 
-      if (score === null) {
+      /*
+      if (score === null) or
+      if (!score) {
         score = {
           wins: 0,
           losses: 0,
           ties: 0
-
         };
+      }
+        score = null 
+        !score => true
+        score === null => true
+
+        score={wins: 0, losses: ...}
+        !score  => false
+        score === null => false
+      */
         
 
-      }
+      
         
       
       

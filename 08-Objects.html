@@ -29,13 +29,13 @@
 
       const product2 = {
         name: 'shirt',
-        ['delivery-time']: '1 day',
+        ['delivery-time']: '1 day', //bracets are optional
         rating: { //nested object
           stars: 4.5,
-          count:87
+          count: 87
         },
 
-        fun: function function1() {
+        fun: function function1() { //method
           console.log('function inside object');
         }
 
@@ -50,7 +50,7 @@
 
       product2.fun();
 
-      console.log(typeof console);
+      console.log(typeof console); //object
       console.log(typeof console.log); //method
 
       //Convert JavaScript Object to JSON
