@@ -6,24 +6,25 @@
   <body>
     <P>Youtube Subscribe Button</P>
     <button onclick="
-      const buttonElement = document.querySelector('.js-subscribe-button');
-
-      if (buttonElement.innerText === 'Subscribe') {
-        buttonElement.innerHTML = 'Subscribed';
-      } else {
-        buttonElement.innerHTML = 'Subscribe';
-      }
+      subscribe();
       "class="js-subscribe-button">
       Subscribe
     </button>
    
     <script>
+      function subscribe() {
+        const buttonElement = document.querySelector('.js-subscribe-button');
 
+        if (buttonElement.innerText === 'Subscribe') {
+          buttonElement.innerHTML = 'Subscribed';
+        } else {
+          buttonElement.innerHTML = 'Subscribe';
+        }
+
+
+      }
       
-
       
-
-     
 
     </script>
   </body>
@@ -31,11 +32,10 @@
 </html>
 
 <!--
-  
   Methods:
   method= function saved inside an object
-  document.querySelector() : lets us get any element from the page and put it inside JS
 
+  document.querySelector()
   .innerText
   .innerHTML
   .
