@@ -27,6 +27,7 @@
       console.log(product);
       */
 
+      /*
       const product2 = {
         name: 'shirt',
         ['delivery-time']: '1 day', //bracets are optional
@@ -60,7 +61,63 @@
       //Convert JSON to JavaScript Object
       const jsonString = JSON.stringify(product2)
       console.log(JSON.parse(jsonString));
-    
+      */
+      console.log('hello'.length);
+      console.log('hello'.toUpperCase());
+
+      //simple values like strings also have properties and methods
+
+      const object1 = {
+        message: 'hello'
+      };
+
+      const object2 = object1; //not copy the object into variable, copies the reference
+      
+      object1.message = 'Good job!';
+      console.log(object1);
+      console.log(object2);
+
+      const object3 = {
+        message : 'Good job!'
+      };
+
+      console.log(object3 === object1); //false
+      console.log(object2 === object1); //true
+      //objects are references
+      //object1 variable has same reference with object2 variable
+      //Comparing the references, not the values inside the object
+
+
+      //Shortcuts for objects
+      const object4 = {
+        message : 'Good job!',
+        price : 459
+      };
+      //const message = object4.message;
+
+      //If the variable name and propert name same
+      const { message, price } = object4; //destructuring
+      console.log(message);
+      console.log(price);
+
+      //Shorthand Property
+      const object5 = {
+        //message: message
+        message,
+        //method: function function1(){ 
+        // console.log('method');
+        //}
+        method() {
+          console.log('method'); //Shorthand Method
+        }
+
+      };
+      console.log(object5); //Good job!
+      object5.method();
+
+      
+
+
     </script>
   </body>
   
