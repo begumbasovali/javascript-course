@@ -10,7 +10,12 @@
     <p>Orders over $40 = Free shipping.</p>
 
     <input placeholder="Cost of order"
-    class="js-cost-input"> 
+    class="js-cost-input" onkeydown="
+      console.log(event.key);
+      if (event.key === 'Enter') {
+        calculateTotal();
+      }
+    "> 
 
     <button onclick= "calculateTotal();">Calculate</button>
 
@@ -41,20 +46,13 @@
 </html>
 
 <!--
-  Algorithm:
-  When we click the calculate-button:
-  1. Get the text in the text box.
-  2. If amount < $40 add + $10.
-  3. Display total on the page.
+  show the total cost when press the enter
+  Use event.key
+  Steps:
+  1. Check if the key is "Enter"
+  2.If it is, do the same thing as the calculate button
 
-  <input> is void element
-  inputElement.value 
+  Every event listener gets an event object
+
   
-  string + number = string
-  '25' + 10 = '2510' Type Coercion
-  typeof cost = string
-
-  Whenever we get a value from the DOM, the value will be a string 
-  So USE Number()
-  let cost = Number(inputElement.value);
 -->
