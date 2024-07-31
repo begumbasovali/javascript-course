@@ -11,10 +11,7 @@
 
     <input placeholder="Cost of order"
     class="js-cost-input" onkeydown="
-      console.log(event.key);
-      if (event.key === 'Enter') {
-        calculateTotal();
-      }
+      handleCostKeyDown(event);
     "> 
 
     <button onclick= "calculateTotal();">Calculate</button>
@@ -23,6 +20,12 @@
 
    
     <script>
+
+      function handleCostKeyDown(event) {
+        if (event.key === 'Enter') {
+          calculateTotal();
+        }
+      }
 
       function calculateTotal(){
         const inputElement = document.querySelector('.js-cost-input');
