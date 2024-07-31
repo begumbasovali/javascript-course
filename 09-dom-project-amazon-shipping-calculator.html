@@ -22,10 +22,10 @@
       function calculateTotal(){
         const inputElement = document.querySelector('.js-cost-input');
 
-        let cost =inputElement.value; //to take the text inside the text box use .value
+        let cost = Number(inputElement.value); //to take the text inside the text box use .value
 
         if (cost  < 40) {
-          cost += 10;
+          cost += 10; //Type Coercion
         }
 
         document.querySelector('.js-total-cost').innerHTML = `$${cost}`;
@@ -46,4 +46,15 @@
   1. Get the text in the text box.
   2. If amount < $40 add + $10.
   3. Display total on the page.
+
+  <input> is void element
+  inputElement.value 
+  
+  string + number = string
+  '25' + 10 = '2510' Type Coercion
+  typeof cost = string
+
+  Whenever we get a value from the DOM, the value will be a string 
+  So USE Number()
+  let cost = Number(inputElement.value);
 -->
