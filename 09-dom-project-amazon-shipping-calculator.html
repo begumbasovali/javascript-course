@@ -8,13 +8,28 @@
     <p>Amazon Shipping Calculator</p>
     <p>Orders under $40 = +$10 shipping. </p>
     <p>Orders over $40 = Free shipping.</p>
-    <input placeholder="Cost of order"> 
-    <button onclick= "calculateTotal();" class="calculate-button">Calculate</button>
+
+    <input placeholder="Cost of order"
+    class="js-cost-input"> 
+
+    <button onclick= "calculateTotal();">Calculate</button>
+
+    <p class="js-total-cost"></p>
 
    
     <script>
 
       function calculateTotal(){
+        const inputElement = document.querySelector('.js-cost-input');
+
+        let cost =inputElement.value; //to take the text inside the text box use .value
+
+        if (cost  < 40) {
+          cost += 10;
+        }
+
+        document.querySelector('.js-total-cost').innerHTML = `$${cost}`;
+        
 
       }
       
@@ -26,11 +41,9 @@
 </html>
 
 <!--
-  Methods:
-  method= function saved inside an object
-
-  document.querySelector()
-  .innerText
-  .innerHTML
-  .
+  Algorithm:
+  When we click the calculate-button:
+  1. Get the text in the text box.
+  2. If amount < $40 add + $10.
+  3. Display total on the page.
 -->
