@@ -7,6 +7,8 @@
 
     <script>
 
+      /*
+
       const myArray = [
         10, 
         20, 
@@ -26,16 +28,38 @@
       myArray.splice(0, 3);
       console.log(myArray);
 
-
-      
-
       [1, 'hello', true, {name: 'socks'}, [1,2]]
 
       console.log(typeof [1,2]);
       console.log(Array.isArray([1,2]));
 
        
+      */
 
+      //Loops- while loop
+
+      let i = 1; //loop variable
+
+      while (i <= 5) { //loop condition
+        console.log(i); //loop body
+        i++;          //increment step
+      }
+
+      //For loop
+
+      for (let i = 1; i <= 5; i++) {
+        console.log(i);
+      }
+
+      //generate random numbers until one that at least 0.5 -> non standard loop use while
+
+      let randomNumber = 0;
+
+      while (randomNumber < 0.5) {
+        randomNumber = Math.random();
+      }
+
+      console.log(randomNumber);
 
     </script>
   </body>
