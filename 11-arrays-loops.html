@@ -70,7 +70,7 @@
         1. Go trough each value of an array
         2. Do sth with each value
 
-      */
+      
 
       const toDoList = [
         'go home',
@@ -87,6 +87,29 @@
         console.log(i);
 
       }
+
+      */
+
+      /*
+        Accumulator Pattern:
+        1. Create a variable to store the result. 
+        2. Loop through the array and update the result.
+
+      */
+      
+      const numsArray = [1, 3, 1];
+      let total = 0;
+
+      for(i = 0; i < numsArray.length; i++){
+        const num = numsArray[i];
+        total += num;
+      }
+      console.log(total);
+
+
+
+
+
 
 
     </script>
