@@ -38,6 +38,8 @@
 
       //Loops- while loop
 
+      /*
+
       let i = 1; //loop variable
 
       while (i <= 5) { //loop condition
@@ -60,6 +62,32 @@
       }
 
       console.log(randomNumber);
+
+      */
+
+      /*
+        Looping Through an Array:
+        1. Go trough each value of an array
+        2. Do sth with each value
+
+      */
+
+      const toDoList = [
+        'go home',
+        'go market',
+        'clean the home',
+        'eat dinner',
+        'wash the dishes'
+      ];
+
+      for (let index = 0; index <= toDoList.length-1; index++) {
+
+        const value = toDoList[index];
+        console.log(value);
+        console.log(index);
+
+      }
+
 
     </script>
   </body>
