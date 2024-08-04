@@ -35,7 +35,6 @@ function renderTodoList() {
     todoListHTML += html;
 
   }
-  console.log(todoListHTML);
 
   document.querySelector('.js-todo-list').innerHTML = todoListHTML;
 }
@@ -45,9 +44,16 @@ function addToDo(){
   const inputElement = document.querySelector('.js-name-input');
   const name = inputElement.value;
 
-  todoList.push(name);
-  console.log(todoList);
+  const dateInputElement = document.querySelector('.js-due-date-input');
+  const dueDate = dateInputElement.value;
 
+  todoList.push({
+    //name: name,
+    //dueDate: dueDate
+    name, 
+    dueDate
+  });
+  
   inputElement.value = '';
 
 
