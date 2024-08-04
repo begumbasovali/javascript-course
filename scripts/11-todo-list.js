@@ -1,4 +1,15 @@
-const todoList = []; //Save data
+const todoList = [
+  {
+    name: 'make dinner',
+    dueDate: '2024-08-04'
+  },
+  { 
+    name: 'wash dishes',
+    dueDate: '2024-08-04'
+
+  }
+
+]; //Save data
 
 renderTodoList();
 
@@ -8,10 +19,13 @@ function renderTodoList() {
 
   
   for (let i = 0; i < todoList.length; i++){
-    const todo = todoList[i];
+    const todoObject = todoList[i];
+    const { name, dueDate } = todoObject; // Destructuring
+    //const name = todoObject.name;
+    //const dueDate =todoObject.dueDate;
     const html = `
       <p>
-        ${todo}
+        ${name} ${dueDate}
         <button onclick="
           todoList.splice(${i}, 1);
           renderTodoList();
